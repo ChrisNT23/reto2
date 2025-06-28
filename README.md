@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FoodiesBNB MVP
 
-## Getting Started
+Mini MVP funcional inspirado en FoodiesBNB.
 
-First, run the development server:
+## 🚀 Instalación y ejecución
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Clona el repositorio:**
+   ```bash
+   git clone <URL_DEL_REPO>
+   cd cofundapr
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Instala las dependencias:**
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Configura Supabase (opcional pero recomendado):**
+   - Crea un proyecto en [Supabase](https://app.supabase.com/).
+   - Crea una tabla `applications` con los campos: `id`, `nombre`, `email`, `ciudad`, `instagram`, `motivo`, `created_at`.
+   - Copia tu `SUPABASE_URL` y `SUPABASE_ANON_KEY` y colócalos en un archivo `.env.local`:
+     ```env
+     NEXT_PUBLIC_SUPABASE_URL=tu_url
+     NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_anon_key
+     ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **Inicia la app en modo desarrollo:**
+   ```bash
+   npm run dev
+   ```
+   Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tecnologías utilizadas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Frontend:**
+  - [Next.js](https://nextjs.org/) (React + SSR)
+  - [React](https://react.dev/) (componentes y hooks)
+  - [TailwindCSS](https://tailwindcss.com/) (estilos rápidos y modernos)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Backend:**
+  - [Supabase](https://supabase.com/) (Base de datos Postgres y Auth, gestionado en la nube)
+  - (Modo demo: localStorage para pruebas sin backend real)
 
-## Deploy on Vercel
+- **Base de datos:**
+  - [Supabase Postgres](https://supabase.com/) (persistencia real de aplicaciones)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Autenticación:**
+  - [Supabase Auth](https://supabase.com/docs/guides/auth) (opcional, para login real)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Otros:**
+  - [TypeScript](https://www.typescriptlang.org/) (tipado estático)
+
+---
+
+## 📦 Estructura principal
+
+- `/src/app` — Páginas principales (`/aplicar`, `/dashboard`, `/login`)
+- `/src/components` — Componentes reutilizables (Navbar, RestaurantCard, ApplicationForm)
+- `/src/utils` — Utilidades (mockData, supabaseClient)
+
+---
+
+## ✨ Créditos
+Inspirado en [FoodiesBNB](https://foodiesbnb.com/microinfluencers)
